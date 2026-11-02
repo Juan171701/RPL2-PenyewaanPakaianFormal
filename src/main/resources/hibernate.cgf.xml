@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Konfigurasi Database MySQL -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3307/db_penyewaan_pakaian</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+
+        <!-- Dialect untuk MySQL -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Menampilkan SQL Query di Console -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Auto update tabel database -->
+        <property name="hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
